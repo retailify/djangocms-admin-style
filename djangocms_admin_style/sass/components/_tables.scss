@@ -87,8 +87,8 @@
             }
             .sort-tooltip {
                 position: absolute;
-                top: -5px;
-                right: 0;
+                top: 5px;
+                right: -15px;
                 background-color: $white;
                 box-shadow: $base-box-shadow;
                 z-index: 50;
@@ -97,16 +97,12 @@
                     display: block;
                     position: absolute;
                     left: -8px;
-                    top: 15px;
-                    width: 14px;
-                    height: 14px;
+                    top: 4px;
+                    width: 15px;
+                    height: 15px;
                     background-color: #fff;
-                    box-shadow: -2px 2px 3.5px rgba(0, 0, 0, .5);
-                    -webkit-box-shadow: -2px 2px 3.5px rgba(0, 0, 0, .5);
-                    -moz-box-shadow: -2px 2px 3.5px rgba(0, 0, 0, .5);
                     transform: rotate(45deg);
-                    -webkit-transform: rotate(45deg);
-                    -moz-transform: rotate(45deg);
+                    box-shadow: -2px 2px 3.5px rgba(0, 0, 0, .2);
                 }
                 ul {
                     padding: 0;

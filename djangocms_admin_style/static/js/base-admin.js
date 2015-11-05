@@ -67,11 +67,16 @@
                 if ($('.sorted').length) {
                     var sortAmount = $('.sorted').length;
                     var tooltipTrigger = $('.sortpriority');
-
+                    var sortedElement = $('.sorted');
                     var tooltip = '';
-                    for (var i = 0; i < sortAmount; i++) {
-                         tooltip += '<li><a href="#">' + [i+1] + '</a></li>';
-                    }
+
+                    sortedElement.find('.sortpriority').closest('table').parent().addClass('table-sorted');
+                    sortedElement.each(function () {
+                        var sortPriority = $(this).find('.sortpriority').text();
+                        var sortLink = $(this).find('.sortpriority').next('a').attr('href');
+                        tooltip += '<li><a href="' + sortLink + '">' + sortPriority + '</a></li>'
+
+                    });
                     tooltip = '<div class="sort-tooltip"><ul>' + tooltip + '</ul></div>';
 
                     console.log(tooltip);
